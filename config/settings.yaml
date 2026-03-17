@@ -1,0 +1,53 @@
+# Power BI Documentation Generator v3.0 - Settings
+
+app:
+  name: "Power BI Documentation Generator"
+  version: "3.0.0"
+  author: "YPF IT Team"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "output/app.log"
+
+parsing:
+  max_file_size_mb: 500
+  encoding: "utf-8"
+  fallback_encoding: "utf-16-le"
+
+document_generation:
+  template_path: "C:\\Users\\SE46958\\1 - Claude - Proyecto viz\\Plantilla Documentacion Técnica Funcional Power Bi.docx"
+  template_path_relative: "templates/plantilla_corporativa_ypf.docx"  # Backup copy
+  output_dir: "output"
+  default_filename_format: "Documentacion_{report_name}_{timestamp}.docx"
+  max_dax_display_length: 0  # 0 = Full expression, no truncation
+
+visualization:
+  er_diagram:
+    output_format: "png"
+    dpi: 300
+    layout_algorithm: "dot"  # graphviz: dot, neato, fdp
+    node_colors:
+      fact_table: "#1f77b4"
+      dimension_table: "#ff7f0e"
+      calculated_table: "#2ca02c"
+    edge_colors:
+      one_to_one: "#d62728"
+      one_to_many: "#9467bd"
+      many_to_one: "#8c564b"
+      many_to_many: "#e377c2"
+
+ui:
+  theme:
+    primary_color: "#FFD700"  # YPF Gold
+    background_color: "#FFFFFF"
+    secondary_background_color: "#F0F2F6"
+    text_color: "#262730"
+
+  upload:
+    max_file_size_mb: 500
+    accepted_formats: [".pbix", ".pbip"]
+
+  preview:
+    max_table_rows: 100
+    max_measures_preview: 50

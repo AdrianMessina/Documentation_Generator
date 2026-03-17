@@ -1,0 +1,55 @@
+# Validation Rules for Power BI Models
+
+model_quality:
+  thresholds:
+    max_bidirectional_relationships: 3
+    max_many_to_many_relationships: 2
+    max_calculated_columns_per_table: 5
+    max_measures_per_table: 50
+    max_tables: 100
+    min_relationships: 1
+
+relationship_checks:
+  - check: "circular_relationships"
+    severity: "error"
+    message: "Se detectaron relaciones circulares en el modelo"
+
+  - check: "orphaned_tables"
+    severity: "warning"
+    message: "Tablas sin relaciones detectadas"
+
+  - check: "bidirectional_chains"
+    severity: "warning"
+    message: "Cadenas de relaciones bidireccionales detectadas"
+
+  - check: "many_to_many_relationships"
+    severity: "warning"
+    message: "Relaciones muchos a muchos pueden afectar el rendimiento"
+
+dax_checks:
+  - check: "nested_calculate"
+    severity: "warning"
+    message: "CALCULATE anidados pueden afectar el rendimiento"
+    max_depth: 3
+
+  - check: "iterator_chains"
+    severity: "warning"
+    message: "Cadenas largas de iteradores (SUMX, FILTER, etc.)"
+    max_chain_length: 3
+
+  - check: "missing_format_string"
+    severity: "info"
+    message: "Medidas sin formato definido"
+
+best_practices:
+  - check: "auto_datetime_enabled"
+    severity: "warning"
+    message: "Auto Date/Time habilitado puede incrementar el tamaño del modelo"
+
+  - check: "calculated_columns_usage"
+    severity: "info"
+    message: "Preferir medidas DAX sobre columnas calculadas cuando sea posible"
+
+  - check: "rls_configured"
+    severity: "info"
+    message: "No se detectó configuración de Row Level Security (RLS)"
