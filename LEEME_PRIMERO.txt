@@ -1,0 +1,175 @@
+╔════════════════════════════════════════════════════════════════╗
+║                                                                ║
+║   📊 GENERADOR DE DOCUMENTACIÓN POWER BI v4.0                 ║
+║                                                                ║
+║   VERSIÓN SIMPLIFICADA - TODO EN ESPAÑOL                      ║
+║                                                                ║
+╚════════════════════════════════════════════════════════════════╝
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🚀 INICIO RÁPIDO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   1. Instalar dependencias: Doble clic en install_dependencies.bat
+
+   2. Ejecutar aplicación: Doble clic en Lanzar_App.bat
+
+   3. Se abrirá automáticamente en: http://localhost:8501
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️  SI TIENES UNA VERSIÓN ANTERIOR:
+    - BORRA tu carpeta local
+    - Descarga de nuevo desde GitHub
+    - NO uses "git pull"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+╔════════════════════════════════════════════════════════════════╗
+║  ✨ NOVEDADES V4.0                                             ║
+╚════════════════════════════════════════════════════════════════╝
+
+  ✅ Interfaz SIMPLIFICADA - Una sola página, sin menús
+  ✅ TODO en ESPAÑOL - Sin mezcla de idiomas
+  ✅ Solo PBIP - Eliminada opción PBIX (no funcionaba bien)
+  ✅ PORTADA CORRECTA - Nombre real del reporte
+  ✅ FILTROS DETECTADOS - Operaciones Power Query
+  ✅ MODELO ER COMPLETO - Con jerarquías y columnas
+  ✅ AUTO DATE/TIME - Detectado y documentado
+  ✅ Instrucciones CLARAS - Paso a paso visual
+
+
+╔════════════════════════════════════════════════════════════════╗
+║  📝 LOS 3 PASOS SIMPLES                                        ║
+╚════════════════════════════════════════════════════════════════╝
+
+  ┌─────────────────────────────────────────────────────────────┐
+  │ PASO 1: Selecciona tu Proyecto PBIP                        │
+  └─────────────────────────────────────────────────────────────┘
+
+     1. Abre el Explorador de Windows
+     2. Navega a tu proyecto .pbip
+     3. Clic en la barra de direcciones
+     4. Copia la ruta (Ctrl+C)
+     5. Pégala en la aplicación
+
+     Ejemplo:
+     C:\Users\TuNombre\Documents\PowerBI\MiReporte.pbip
+
+
+  ┌─────────────────────────────────────────────────────────────┐
+  │ PASO 2: Completa la Información                            │
+  └─────────────────────────────────────────────────────────────┘
+
+     OBLIGATORIOS:
+     • Versión: 1.0
+     • Autor: YPF IT Analytics Team
+     • Observaciones: Generación inicial
+
+     OPCIONALES (se auto-generan si vacíos):
+     • Objetivo del reporte
+     • Alcance del análisis
+     • Administrador y solicitante
+     • Frecuencia de actualización
+
+
+  ┌─────────────────────────────────────────────────────────────┐
+  │ PASO 3: Generar y Descargar                                │
+  └─────────────────────────────────────────────────────────────┘
+
+     1. Clic en "Analizar y Generar Documentación"
+     2. Revisa los datos extraídos
+     3. Clic en "Generar Documento Word"
+     4. Descarga el archivo .docx
+
+
+╔════════════════════════════════════════════════════════════════╗
+║  📄 QUÉ SE INCLUYE EN EL DOCUMENTO                            ║
+╚════════════════════════════════════════════════════════════════╝
+
+  ✅ Portada con nombre real del reporte
+  ✅ Versión del documento (tabla completa)
+  ✅ Objetivo (auto-generado o manual)
+  ✅ Alcance (detectado o manual)
+  ✅ Usuarios (administrador y solicitante)
+  ✅ Definiciones (TODAS las medidas DAX con fórmulas)
+  ✅ Orígenes (tablas y queries Power Query)
+  ✅ Filtros (operaciones Power Query detectadas)
+  ✅ Modelo ER (estadísticas, jerarquías, columnas)
+  ✅ RLS (roles de seguridad)
+  ✅ Anexo (resumen de columnas calculadas)
+
+
+╔════════════════════════════════════════════════════════════════╗
+║  ❓ PREGUNTAS FRECUENTES                                       ║
+╚════════════════════════════════════════════════════════════════╝
+
+  Q: ¿Por qué solo PBIP y no PBIX?
+  A: PBIP permite lectura completa del modelo TMDL. PBIX es
+     binario y puede fallar en la extracción de datos.
+
+  Q: ¿Qué son las tablas LocalDateTable?
+  A: Tablas auto-generadas por Power BI con Auto Date/Time.
+     V4 las detecta, documenta y excluye de la lista de orígenes.
+
+  Q: ¿Por qué "No se detectaron filtros"?
+  A: Solo se detectan filtros en Power Query (SelectRows, etc.)
+     y tablas calculadas DAX. Los filtros de visuales no se
+     incluyen porque están en las páginas del reporte.
+
+
+╔════════════════════════════════════════════════════════════════╗
+║  🔧 SOLUCIÓN DE PROBLEMAS                                      ║
+╚════════════════════════════════════════════════════════════════╝
+
+  ⚠ Error en instalación: "metadata-generation-failed"
+     → Lee: TROUBLESHOOTING_INSTALACION.md
+     → El install_dependencies.bat ya tiene la solución incluida
+     → Ejecuta el .bat nuevamente
+
+  ⚠ Error: "No se encontró .SemanticModel"
+     → Verifica que la ruta apunta a un proyecto PBIP válido
+     → No incluyas comillas al pegar la ruta
+
+  ⚠ Error: "Template not found"
+     → Verifica que existe:
+       C:\Users\SE46958\1 - Claude - Proyecto viz\
+       Plantilla Documentacion Técnica Funcional Power Bi.docx
+
+  ⚠ La aplicación no inicia
+     → Abre terminal y ejecuta:
+       export HTTPS_PROXY=http://proxy-azure
+       pip install -r requirements.txt
+       cd ui
+       streamlit run app_simple_v4.py
+
+
+╔════════════════════════════════════════════════════════════════╗
+║  📁 DOCUMENTACIÓN ADICIONAL                                    ║
+╚════════════════════════════════════════════════════════════════╝
+
+  📖 README.md                         - Documentación completa
+  📖 INSTRUCCIONES_V4.md               - Guía completa detallada
+  📝 CAMBIOS_V4.txt                    - Lista completa de cambios
+  🔧 TROUBLESHOOTING_INSTALACION.md    - Solución problemas instalación
+  🧪 test_setup.py                     - Verificar configuración
+
+
+╔════════════════════════════════════════════════════════════════╗
+║  📞 SOPORTE                                                     ║
+╚════════════════════════════════════════════════════════════════╝
+
+  Email: analytics@ypf.com
+  Versión: v4.0 - Simple & Clean
+  Fecha: 10 de Marzo, 2026
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  🎉 ¡LISTO PARA USAR!
+
+  Haz doble clic en run_app.bat para comenzar
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

@@ -95,6 +95,9 @@ Interfaz Completa | Versión 4.0.0 | 16-Mar-2026
 
 - **Python 3.8 o superior**
 - Windows (probado en Windows 10/11)
+- **Red corporativa YPF**: El instalador configura automáticamente el proxy
+
+> 💡 **Nota**: Si tienes problemas en la instalación, consulta [TROUBLESHOOTING_INSTALACION.md](TROUBLESHOOTING_INSTALACION.md)
 
 ## ⚡ Instalación Rápida
 
@@ -111,6 +114,8 @@ O descargar ZIP desde: https://github.com/AdrianMessina/Documentation_generator
 
 **Doble clic en:** [install_dependencies.bat](install_dependencies.bat)
 
+> ⚠️ **Si recibes error "metadata-generation-failed" con numpy/pandas**: Ver [TROUBLESHOOTING_INSTALACION.md](TROUBLESHOOTING_INSTALACION.md)
+
 O desde terminal:
 
 ```bash
@@ -122,6 +127,12 @@ pip install -r requirements.txt
 # Sin proxy
 pip install -r requirements.txt
 ```
+
+**El instalador actualizado incluye**:
+- ✅ Actualización automática de pip/setuptools/wheel
+- ✅ Instalación de numpy/pandas con wheels precompilados
+- ✅ Flag `--prefer-binary` para evitar compilación
+- ✅ Configuración automática del proxy
 
 ### 3️⃣ Ejecutar la aplicación
 
